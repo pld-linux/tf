@@ -1,23 +1,23 @@
-# html doc files aren't sync with tf releases
-# new tf releases contains mostly bug fixes, so
-# older docs should be ok
-%define		doc_ver 	50b1
+# Often html doc files aren't sync with tf releases.
+# New tf releases contains mostly bug fixes, so
+# older docs should be ok.
+%define		doc_ver 	50b5
 Summary:	tf - TinyFugue - text-mode MUD client
 Summary(pl):	tf - TinyFugue - tekstowy klient do MUD-ów
 Name:		tf
-Version:	50b4
+Version:	50b5
 Release:	1
 License:	GPL
 Group:		Applications/Games
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
 Source0:	ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue/%{name}-%{version}.tar.gz
-# Source0-md5:	96454db55d4c117d5860b9a9f8388050
+# Source0-md5:	6e6602f1618d31e40de24e46640f1ff8
 Source1:	ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue/%{name}-%{doc_ver}-help.tar.gz
-# Source1-md5:	839c6ece427fea39aea31b22c6bbc363
+# Source1-md5:	c2eb4e3fada91ea287f3b765aba3842b
 Source2:	stest.tf
 Source3:	http://www.ingwar.eu.org/downloads/tf.syntax.gz
 # Source3-md5:	398aa4c28e83fb2ce688eade24c5fc88
-Patch0:		status_height.patch
+Patch0:		%{name}-%{version}-multistatus.patch
 URL:		http://tf.tcp.com/~hawkeye/tf/
 BuildRequires:	autoconf
 BuildRequires:	ncurses-devel
