@@ -6,8 +6,8 @@ Release:	1
 License:	GPL
 Group:		Applications/Games
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
-URL:		http://tf.tcp.com/~hawkeye/tf/
 Source0:	ftp://tf.tcp.com/pub/tinyfugue/%{name}-%{version}.tar.gz
+URL:		http://tf.tcp.com/~hawkeye/tf/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -59,14 +59,11 @@ ln -sf stack-q.tf stack-queue.tf
 ln -sf world-q.tf worldqueue.tf
 )
 
-gzip -9nf CHANGES CREDITS README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-sh unixmake clean
 
 %files
 %defattr(644,root,root,755)
+%doc CHANGES CREDITS README
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}-%{version}
-%doc *.gz
