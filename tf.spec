@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Games
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
 Source0:	ftp://tf.tcp.com/pub/tinyfugue/%{name}-%{version}.tar.gz
+# Source0-md5:	db6fa9a1aac0b7f199567d81c4b5c81d
 Patch0:		%{name}-filenames.patch
 URL:		http://tf.tcp.com/~hawkeye/tf/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
