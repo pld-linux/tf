@@ -28,9 +28,9 @@ mv -f unix/Config unix/Config.orig
 cat << EOF >> unix/Config
 TF="\${T_BIN}/tf-\${TFVER}"
 LIBDIR="\${T_SHARE}/tf"
-SYMLINK="$RPM_BUILD_ROOT/usr/bin/tf"
+SYMLINK="$RPM_BUILD_ROOT%{_bindir}/tf"
 MAILDIR="/var/mail"
-MANPAGE="/usr/share/man/man1/tf.1"
+MANPAGE="%{_mandir}/man1/tf.1"
 MANTYPE="nroff"
 CCFLAGS="$RPM_OPT_FLAGS"
 EOF
@@ -69,5 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES CREDITS README
 %attr(755,root,root) %{_bindir}/%{name}
-%{_datadir}/%{name}
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/*tf
 %{_mandir}/man1/tf.1*
