@@ -34,6 +34,7 @@ obs³ugê wieloliniowego statusu.
 Summary:        tf - TinyFugue - text-mode MUD client - HTML help files
 Summary(pl):    tf - TinyFugue - tekstowy klient do MUD-ów - pliki pomocy w HTML
 Group:          Applications/Games
+
 %description doc
 HTML help files.
 
@@ -54,8 +55,6 @@ cp %{SOURCE2} .
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT%{_libdir}/tf-lib
-
-install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}
 install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/topics
 install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/commands
 
@@ -64,8 +63,8 @@ install tf-lib/* $RPM_BUILD_ROOT%{_libdir}/tf-lib
 install src/tf $RPM_BUILD_ROOT%{_bindir}
 
 install %{name}-%{version}-help/tf-help $RPM_BUILD_ROOT%{_libdir}/tf-lib
-install %{name}-%{version}-help/topics/* $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/topics/
-install %{name}-%{version}-help/commands/* $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/commands/
+install %{name}-%{version}-help/topics/* $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/topics
+install %{name}-%{version}-help/commands/* $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/commands
 install %{name}-%{version}-help/index.html $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/index.html
 
 %clean
@@ -80,10 +79,8 @@ echo "You have been warned."
 %defattr(644,root,root,755)
 %doc CHANGES CREDITS README stest.tf
 %attr(755,root,root) %{_bindir}/*
-%{_libdir}/%{name}-lib/*
+%{_libdir}/%{name}-lib
 
 %files doc
 %defattr(644,root,root,755)
-%{_docdir}/%{name}-doc-%{version}/index.html
-%{_docdir}/%{name}-doc-%{version}/topics/*
-%{_docdir}/%{name}-doc-%{version}/commands/*
+%{_docdir}/%{name}-doc-%{version}
