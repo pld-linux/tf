@@ -5,8 +5,6 @@ Version:	40s1
 Release:	1
 License:	GPL
 Group:		Applications/Games
-Group(de):	Applikationen/Spiele
-Group(pl):	Aplikacje/Gry
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
 URL:		http://tf.tcp.com/~hawkeye/tf/  
 Source0:	ftp://tf.tcp.com/pub/tinyfugue/%{name}-%{version}.tar.gz
