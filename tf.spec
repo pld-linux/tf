@@ -2,13 +2,16 @@ Summary:	tf - TinyFugue - MUD client
 Summary(pl):	tf - TinyFugue - tekstowy klient do MUD-ów
 Name:		tf
 Version:	40s1
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Games
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
 Source0:	ftp://tf.tcp.com/pub/tinyfugue/%{name}-%{version}.tar.gz
-# Source0-md5:	db6fa9a1aac0b7f199567d81c4b5c81d
+# Source0-md5:  db6fa9a1aac0b7f199567d81c4b5c81d
+Source1:	http://dooh.civ.pl/patches/%{name}-%{version}-mccp.patch.gz
+# Source1-md5:  319599aba0f574344b14d291e18f57f8
 Patch0:		%{name}-filenames.patch
+Patch1:		%{name}-%{version}-mccp.patch.gz
 URL:		http://tf.tcp.com/~hawkeye/tf/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,11 +28,12 @@ MUD-y. Oczywi¶cie dla trybu tekstowego :).
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 mv -f unix/Config unix/Config.orig
 cat << EOF >> unix/Config
 TF="\${T_BIN}/tf-\${TFVER}"
 LIBDIR="\${T_SHARE}/tf"
-SYMLINK="$RPM_BUILD_ROOT%{_bindir}/tf"
+#SYMLINK="$RPM_BUILD_ROOT%{_bindir}/tf"
 MAILDIR="/var/mail"
 MANPAGE="%{_mandir}/man1/tf.1"
 MANTYPE="nroff"
