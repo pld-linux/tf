@@ -6,9 +6,9 @@ Release:	0.1
 License:	GPL
 Group:		Applications/Games
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
-Source0:	ftp://ftp.tcp.com/pub/mud/Clients/tinyfugue/%{name}-%{version}.tar.gz
+Source0:	ftp://distfiles.pld-linux.org/src/%{name}-%{version}.tar.gz
 # Source0-md5:	dd33896dcb5d841f6b5f4e07fa517af1
-Source1:	ftp://ftp.tcp.com/pub/mud/Clients/tinyfugue/%{name}-%{version}-help.tar.gz
+Source1:	ftp://distfiles.pld-linux.org/src/%{name}-%{version}-help.tar.gz
 # Source1-md5:	79faceed502b867f1bf1263efd5e41a8
 Source2:	stest.tf
 Patch0:		status_height.patch
