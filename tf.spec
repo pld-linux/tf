@@ -44,7 +44,7 @@ Pliki pomocy w HTML.
 %prep
 %setup -q -n %{name}-%{version}
 %patch0 -p1
-tar xfz %{SOURCE1}
+tar xzPf %{SOURCE1}
 cp %{SOURCE2} .
 %build
 %{__autoconf}
