@@ -8,8 +8,6 @@ Group:		Applications/Games
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
 Source0:	ftp://tf.tcp.com/pub/tinyfugue/%{name}-%{version}.tar.gz
 # Source0-md5:  db6fa9a1aac0b7f199567d81c4b5c81d
-Source1:	http://dooh.civ.pl/patches/%{name}-%{version}-mccp.patch.gz
-# Source1-md5:  319599aba0f574344b14d291e18f57f8
 Patch0:		%{name}-filenames.patch
 Patch1:		%{name}-%{version}-mccp.patch.gz
 URL:		http://tf.tcp.com/~hawkeye/tf/
