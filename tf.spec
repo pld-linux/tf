@@ -30,7 +30,7 @@ MUD-y. Oczywi¶cie dla trybu tekstowego :).
 %patch0 -p1
 %patch1 -p1
 mv -f unix/Config unix/Config.orig
-cat << EOF >> unix/Config
+cat >> unix/Config << EOF
 TF="\${T_BIN}/tf-\${TFVER}"
 LIBDIR="\${T_SHARE}/tf"
 #SYMLINK="$RPM_BUILD_ROOT%{_bindir}/tf"
