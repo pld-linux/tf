@@ -1,19 +1,19 @@
 # Often html doc files aren't sync with tf releases.
 # New tf releases contains mostly bug fixes, so
 # older docs should be ok.
-%define		doc_ver 	50b5
+%define		doc_ver 	50b6
 Summary:	tf - TinyFugue - text-mode MUD client
 Summary(pl):	tf - TinyFugue - tekstowy klient do MUD-ów
 Name:		tf
-Version:	50b5
+Version:	50b6
 Release:	1
 License:	GPL
 Group:		Applications/Games
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
 Source0:	ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue/%{name}-%{version}.tar.gz
-# Source0-md5:	6e6602f1618d31e40de24e46640f1ff8
+# Source0-md5:	f6321287413b70df0d3def4de1b8bd50
 Source1:	ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue/%{name}-%{doc_ver}-help.tar.gz
-# Source1-md5:	c2eb4e3fada91ea287f3b765aba3842b
+# Source1-md5:	44483edde9141963529f328d17a87b53
 Source2:	stest.tf
 Source3:	http://www.ingwar.eu.org/downloads/tf.syntax.gz
 # Source3-md5:	398aa4c28e83fb2ce688eade24c5fc88
