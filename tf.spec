@@ -39,9 +39,9 @@ w trybie tekstowym, obs³uguje protokó³ kompresji MCCP oraz posiada
 obs³ugê wieloliniowego statusu.
 
 %package doc
-Summary:        tf - TinyFugue - text-mode MUD client - HTML help files
-Summary(pl):    tf - TinyFugue - tekstowy klient do MUD-ów - pliki pomocy w HTML
-Group:          Applications/Games
+Summary:	tf - TinyFugue - text-mode MUD client - HTML help files
+Summary(pl):	tf - TinyFugue - tekstowy klient do MUD-ów - pliki pomocy w HTML
+Group:		Applications/Games
 
 %description doc
 HTML help files.
