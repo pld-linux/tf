@@ -22,6 +22,9 @@ Multi-User-Non-Graphic-Fantasy-Role-Playing-Games. Just Enter "tf" and
 enjoy your game.
 
 %description -l pl
+TinyFugue jest klientem MUD (Multi User Dungeons), który pozwala 
+u¿ytkownikowi zag³êbiæ siê w najbardziej fascynuj±cy ¶wiat
+Multi-User-Non-Graphic-Fantasy-Role-Playing-Games.
 Po prostu jeden z najlepszych, je¶li nie najlepszy klient do gry w
 MUD-y (wraz z obsluga protokolu kompresji MCCP). Oczywi¶cie dla trybu 
 tekstowego :).
