@@ -2,7 +2,7 @@ Summary:	tf - TinyFugue - MUD client
 Summary(pl):	tf - TinyFugue - tekstowy klient do MUD-ów
 Name:		tf
 Version:	40s1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Games
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
@@ -32,7 +32,7 @@ SYMLINK="$RPM_BUILD_ROOT%{_bindir}/tf"
 MAILDIR="/var/mail"
 MANPAGE="%{_mandir}/man1/tf.1"
 MANTYPE="nroff"
-CCFLAGS="$RPM_OPT_FLAGS"
+CCFLAGS="%{rpmcflags}"
 EOF
 cat unix/Config.orig >> unix/Config
 
@@ -71,4 +71,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*tf
+%{_datadir}/%{name}/tf-help*
 %{_mandir}/man1/tf.1*
