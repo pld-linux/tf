@@ -23,7 +23,8 @@ enjoy your game.
 
 %description -l pl
 Po prostu jeden z najlepszych, je¶li nie najlepszy klient do gry w
-MUD-y. Oczywi¶cie dla trybu tekstowego :).
+MUD-y (wraz z obsluga protokolu kompresji MCCP). Oczywi¶cie dla trybu 
+tekstowego :).
 
 %prep
 %setup -q
