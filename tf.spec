@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Games
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
-URL:		http://tf.tcp.com/~hawkeye/tf/  
+URL:		http://tf.tcp.com/~hawkeye/tf/
 Source0:	ftp://tf.tcp.com/pub/tinyfugue/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +33,7 @@ MANTYPE="nroff"
 MANPAGE="/usr/man/man1/tf.1"
 CCFLAGS="$RPM_OPT_FLAGS"
 EOF
-cat unix/Config.orig >> unix/Config  
+cat unix/Config.orig >> unix/Config
 
 %build
 T_BIN="%{_bindir}"
