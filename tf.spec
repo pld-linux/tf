@@ -1,4 +1,4 @@
-Summary:	tf - TinyFugue - MUD client
+Summary:	tf - TinyFugue - text-mode MUD client
 Summary(pl):	tf - TinyFugue - tekstowy klient do MUD-ów
 Name:		tf
 Version:	40s1
@@ -17,14 +17,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 TinyFugue is a MUD-Client (Multi User Dungeons) that allows the user
 to dive into one the most fascinating
 Multi-User-Non-Graphic-Fantasy-Role-Playing-Games. Just Enter "tf" and
-enjoy your game.
+enjoy your game. This client works in text mode and supports MCCP
+compression.
 
 %description -l pl
 TinyFugue jest klientem MUD (Multi User Dungeons), który pozwala 
 u¿ytkownikowi zag³êbiæ siê w najbardziej fascynuj±cy ¶wiat
-Multi-User-Non-Graphic-Fantasy-Role-Playing-Games.
-Po prostu jeden z najlepszych, je¶li nie najlepszy klient do gry w
-MUD-y (wraz z obsluga protokolu kompresji MCCP). Oczywi¶cie dla trybu 
+Multi-User-Non-Graphic-Fantasy-Role-Playing-Games. Jest to po prostu
+jeden z najlepszych, je¶li nie najlepszy klient do gry w MUD-y (wraz
+z obs³ug± protoko³u kompresji MCCP). Oczywi¶cie dla trybu
 tekstowego :).
 
 %prep
