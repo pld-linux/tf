@@ -20,6 +20,7 @@ Source3:	http://www.ingwar.eu.org/downloads/tf.syntax.gz
 Patch0:		status_height.patch
 URL:		http://tf.tcp.com/~hawkeye/tf/
 BuildRequires:	autoconf
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
