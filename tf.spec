@@ -10,8 +10,6 @@ URL:		http://tf.tcp.com/~hawkeye/tf/
 Source0:	ftp://tf.tcp.com/pub/tinyfugue/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/bin
-
 %description
 TinyFugue is a MUD-Client (Multi User Dungeons) that allows the user
 to dive into one the most fascinating
@@ -43,20 +41,17 @@ ans=y sh unixmake files
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{datadir}/%{name}-%{version}}
-install src/tf  $RPM_BUILD_ROOT%{_bindir}/%{name}-%{version}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}-%{version}}
+install src/tf  $RPM_BUILD_ROOT%{_bindir}/%{name}
 install tf-lib/*  $RPM_BUILD_ROOT%{_datadir}/%{name}-%{version}
 
-(cd $RPM_BUILD_ROOT%{_bindir}
-ln -sf %{name}-%{version} %{name}
-)
 (cd $RPM_BUILD_ROOT%{_datadir}/%{name}-%{version}
 ln -sf kb-bash.tf bind-bash.tf
-ln -sf kd-emacs.tf bind-emacs.tf
+ln -sf kb-emacs.tf bind-emacs.tf
 ln -sf complete.tf completion.tf
 ln -sf factoral.tf factorial.tf
 ln -sf filexfer.tf file-xfer.tf
-ln -sf local.eg.tf local.tf.sample
+ln -sf local-eg.tf local.tf.sample
 ln -sf psh.tf pref-shell.tf
 ln -sf spc-page.tf space_page.tf
 ln -sf spedwalk.tf speedwalk.tf
@@ -72,7 +67,6 @@ sh unixmake clean
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/%{name}-%{version}
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}-%{version}
 %doc *.gz
