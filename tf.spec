@@ -1,18 +1,25 @@
+# html doc files aren't sync with tf releases
+# new tf releases contains mostly bug fixes, so
+# older docs should be ok
+%define		doc_ver 	50b1
 Summary:	tf - TinyFugue - text-mode MUD client
 Summary(pl):	tf - TinyFugue - tekstowy klient do MUD-ów
 Name:		tf
-Version:	50b3
-Release:	0.1
+Version:	50b4
+Release:	1
 License:	GPL
 Group:		Applications/Games
 Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
-Source0:	ftp://distfiles.pld-linux.org/src/%{name}-%{version}.tar.gz
-# Source0-md5:	dd33896dcb5d841f6b5f4e07fa517af1
-Source1:	ftp://distfiles.pld-linux.org/src/%{name}-%{version}-help.tar.gz
-# Source1-md5:	79faceed502b867f1bf1263efd5e41a8
+Source0:	ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue/%{name}-%{version}.tar.gz
+# Source0-md5:	96454db55d4c117d5860b9a9f8388050
+Source1:	ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue/%{name}-%{doc_ver}-help.tar.gz
+# Source1-md5:	839c6ece427fea39aea31b22c6bbc363
 Source2:	stest.tf
+Source3:	http://www.ingwar.eu.org/downloads/tf.syntax.gz
+# Source3-md5:	398aa4c28e83fb2ce688eade24c5fc88
 Patch0:		status_height.patch
 URL:		http://tf.tcp.com/~hawkeye/tf/
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,6 +53,7 @@ Pliki pomocy w HTML.
 %patch0 -p1
 tar xzPf %{SOURCE1}
 cp %{SOURCE2} .
+cp %{SOURCE3} .
 %build
 %{__autoconf}
 %configure
@@ -62,10 +70,9 @@ install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/commands
 install tf-lib/* $RPM_BUILD_ROOT%{_libdir}/tf-lib
 install src/tf $RPM_BUILD_ROOT%{_bindir}
 
-install %{name}-%{version}-help/tf-help $RPM_BUILD_ROOT%{_libdir}/tf-lib
-install %{name}-%{version}-help/topics/* $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/topics
-install %{name}-%{version}-help/commands/* $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/commands
-install %{name}-%{version}-help/index.html $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/index.html
+install %{name}-%{doc_ver}-help/topics/* $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/topics
+install %{name}-%{doc_ver}-help/commands/* $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/commands
+install %{name}-%{doc_ver}-help/index.html $RPM_BUILD_ROOT%{_docdir}/%{name}-doc-%{version}/index.html
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -77,7 +84,7 @@ echo "You have been warned."
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES CREDITS README stest.tf
+%doc CHANGES CREDITS README stest.tf tf.syntax.gz
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/%{name}-lib
 
