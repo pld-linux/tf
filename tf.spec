@@ -21,7 +21,7 @@ enjoy your game. This client works in text mode and supports MCCP
 compression.
 
 %description -l pl
-TinyFugue jest klientem MUD (Multi User Dungeons), który pozwala 
+TinyFugue jest klientem MUD (Multi User Dungeons), który pozwala
 u¿ytkownikowi zag³êbiæ siê w najbardziej fascynuj±cy ¶wiat
 Multi-User-Non-Graphic-Fantasy-Role-Playing-Games. Jest to po prostu
 jeden z najlepszych, je¶li nie najlepszy klient do gry w MUD-y (wraz
