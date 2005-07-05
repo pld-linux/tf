@@ -9,7 +9,6 @@ Version:	50b6
 Release:	1
 License:	GPL
 Group:		Applications/Games
-Vendor:		Ken Keys (Hawkeye) <hawkeye@tf.tcp.com>
 Source0:	ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue/%{name}-%{version}.tar.gz
 # Source0-md5:	f6321287413b70df0d3def4de1b8bd50
 Source1:	ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue/%{name}-%{doc_ver}-help.tar.gz
@@ -50,7 +49,7 @@ HTML help files.
 Pliki pomocy w HTML.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 %patch0 -p1
 tar xzPf %{SOURCE1}
 cp %{SOURCE2} .
