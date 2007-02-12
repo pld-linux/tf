@@ -3,7 +3,7 @@
 # older docs should be ok.
 %define		doc_ver 	50b7
 Summary:	tf - TinyFugue - text-mode MUD client
-Summary(pl.UTF-8):   tf - TinyFugue - tekstowy klient do MUD-ów
+Summary(pl.UTF-8):	tf - TinyFugue - tekstowy klient do MUD-ów
 Name:		tf
 Version:	50b7
 Release:	1
@@ -37,7 +37,7 @@ obsługę wieloliniowego statusu.
 
 %package doc
 Summary:	tf - TinyFugue - text-mode MUD client - HTML help files
-Summary(pl.UTF-8):   tf - TinyFugue - tekstowy klient do MUD-ów - pliki pomocy w HTML
+Summary(pl.UTF-8):	tf - TinyFugue - tekstowy klient do MUD-ów - pliki pomocy w HTML
 Group:		Applications/Games
 
 %description doc
