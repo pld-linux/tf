@@ -3,7 +3,7 @@
 # older docs should be ok.
 %define		doc_ver 	50b7
 Summary:	tf - TinyFugue - text-mode MUD client
-Summary(pl):	tf - TinyFugue - tekstowy klient do MUD-ów
+Summary(pl.UTF-8):   tf - TinyFugue - tekstowy klient do MUD-Ã³w
 Name:		tf
 Version:	50b7
 Release:	1
@@ -27,23 +27,23 @@ Multi-User-Non-Graphic-Fantasy-Role-Playing-Games. Just Enter "tf" and
 enjoy your game. This client works in text mode, supports MCCP
 compression and multiline statusbar.
 
-%description -l pl
-TinyFugue jest klientem MUD (Multi User Dungeons), który pozwala
-u¿ytkownikowi zag³êbiæ siê w najbardziej fascynuj±cy ¶wiat
+%description -l pl.UTF-8
+TinyFugue jest klientem MUD (Multi User Dungeons), ktÃ³ry pozwala
+uÅ¼ytkownikowi zagÅ‚Ä™biÄ‡ siÄ™ w najbardziej fascynujÄ…cy Å›wiat
 Multi-User-Non-Graphic-Fantasy-Role-Playing-Games. Jest to po prostu
-jeden z najlepszych, je¶li nie najlepszy klient do gry w MUD-y. Dzia³a 
-w trybie tekstowym, obs³uguje protokó³ kompresji MCCP oraz posiada 
-obs³ugê wieloliniowego statusu.
+jeden z najlepszych, jeÅ›li nie najlepszy klient do gry w MUD-y. DziaÅ‚a 
+w trybie tekstowym, obsÅ‚uguje protokÃ³Å‚ kompresji MCCP oraz posiada 
+obsÅ‚ugÄ™ wieloliniowego statusu.
 
 %package doc
 Summary:	tf - TinyFugue - text-mode MUD client - HTML help files
-Summary(pl):	tf - TinyFugue - tekstowy klient do MUD-ów - pliki pomocy w HTML
+Summary(pl.UTF-8):   tf - TinyFugue - tekstowy klient do MUD-Ã³w - pliki pomocy w HTML
 Group:		Applications/Games
 
 %description doc
 HTML help files.
 
-%description doc -l pl
+%description doc -l pl.UTF-8
 Pliki pomocy w HTML.
 
 %prep
