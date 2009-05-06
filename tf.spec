@@ -1,21 +1,21 @@
 # Often html doc files aren't sync with tf releases.
 # New tf releases contains mostly bug fixes, so
 # older docs should be ok.
-%define		doc_ver 	50b7
+%define		doc_ver 	50b8
 Summary:	tf - TinyFugue - text-mode MUD client
 Summary(pl.UTF-8):	tf - TinyFugue - tekstowy klient do MUD-ów
 Name:		tf
-Version:	50b7
+Version:	50b8
 Release:	1
 License:	GPL
 Group:		Applications/Games
-Source0:	ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue/%{name}-%{version}.tar.gz
-# Source0-md5:	6652b7eda8a200d28e8184c1659137a2
-Source1:	ftp://ftp.mud.de/pub/software/clients/unix/tinyfugue/%{name}-%{doc_ver}-help.tar.gz
-# Source1-md5:	e143640bfa7dd8cc1c96def5e8ec44f6
-Source2:	http://www.ingwar.eu.org/downloads/tf.syntax.gz
-# Source2-md5:	398aa4c28e83fb2ce688eade24c5fc88
-URL:		http://tf.tcp.com/~hawkeye/tf/
+Source0:	http://dl.sourceforge.net/tinyfugue/%{name}-%{version}.tar.gz
+# Source0:
+Source1:	http://dl.sourceforge.net/tinyfugue/%{name}-%{doc_ver}-help.tar.gz
+# Source1:
+Source2:	http://www.ingwar.eu.org/downloads/%{name}.syntax.gz
+# Source2:
+URL:		http://sourceforge.net/projects/tinyfugue/
 BuildRequires:	autoconf
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,8 +31,8 @@ compression and multiline statusbar.
 TinyFugue jest klientem MUD (Multi User Dungeons), który pozwala
 użytkownikowi zagłębić się w najbardziej fascynujący świat
 Multi-User-Non-Graphic-Fantasy-Role-Playing-Games. Jest to po prostu
-jeden z najlepszych, jeśli nie najlepszy klient do gry w MUD-y. Działa 
-w trybie tekstowym, obsługuje protokół kompresji MCCP oraz posiada 
+jeden z najlepszych, jeśli nie najlepszy klient do gry w MUD-y. Działa
+w trybie tekstowym, obsługuje protokół kompresji MCCP oraz posiada
 obsługę wieloliniowego statusu.
 
 %package doc
@@ -80,7 +80,7 @@ echo "You have been warned."
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES CREDITS README stest.tf tf.syntax.gz
+%doc CHANGES CREDITS README tf.syntax.gz
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/%{name}-lib
 
