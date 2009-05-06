@@ -10,11 +10,11 @@ Release:	1
 License:	GPL
 Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/tinyfugue/%{name}-%{version}.tar.gz
-# Source0:
+# Source0-md5:	3e994e791966d274f63b0e61abf2ef59
 Source1:	http://dl.sourceforge.net/tinyfugue/%{name}-%{doc_ver}-help.tar.gz
-# Source1:
+# Source1-md5:	26eb64b2f811c8143e9c08654d26d138
 Source2:	http://www.ingwar.eu.org/downloads/%{name}.syntax.gz
-# Source2:
+# Source2-md5:	398aa4c28e83fb2ce688eade24c5fc88
 URL:		http://sourceforge.net/projects/tinyfugue/
 BuildRequires:	autoconf
 BuildRequires:	ncurses-devel
