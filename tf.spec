@@ -6,7 +6,7 @@ Summary:	tf - TinyFugue - text-mode MUD client
 Summary(pl.UTF-8):	tf - TinyFugue - tekstowy klient do MUD-ów
 Name:		tf
 Version:	50b8
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/tinyfugue/%{name}-%{version}.tar.gz
@@ -15,6 +15,7 @@ Source1:	http://dl.sourceforge.net/tinyfugue/%{name}-%{doc_ver}-help.tar.gz
 # Source1-md5:	26eb64b2f811c8143e9c08654d26d138
 Source2:	http://www.ingwar.eu.org/downloads/%{name}.syntax.gz
 # Source2-md5:	398aa4c28e83fb2ce688eade24c5fc88
+Patch0:		pcre.patch
 URL:		http://sourceforge.net/projects/tinyfugue/
 BuildRequires:	autoconf
 BuildRequires:	ncurses-devel
@@ -50,6 +51,8 @@ Pliki pomocy w HTML.
 %setup -q
 tar xzPf %{SOURCE1}
 cp %{SOURCE2} .
+%patch0 -p1
+
 %build
 %{__autoconf}
 %configure
