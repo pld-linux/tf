@@ -1,0 +1,11 @@
+--- tf-50b8/src/socket.h~	2007-01-14 00:12:39.000000000 +0100
++++ tf-50b8/src/socket.h	2021-10-11 23:14:17.317476779 +0200
+@@ -21,7 +21,7 @@
+ #define CONN_BG		0x08
+ #define CONN_FG		0x10
+ 
+-struct World   *world_decl;	/* declares struct World */
++typedef struct World   *world_decl;	/* declares struct World */
+ 
+ extern String *incoming_text;
+ extern int quit_flag;
